@@ -3,46 +3,12 @@ from streamlit_option_menu import option_menu
 import pyodbc
 import pandas as pd
 from sqlalchemy import create_engine
+st.set_page_config(page_title = "Hospital App", page_icon= '🏥', layout="wide")
 
 
-
-def get_connection():
-    try:
-        conn = pyodbc.connect(
-            "DRIVER={ODBC Driver 17 for SQL Server};"
-            "SERVER=OMNO;"
-            "DATABASE=NewHospital;"
-            "Trusted_Connection=yes;"
-        )
-        return conn
-    except Exception as e:
-        st.error(f"Error connecting to database: {e}")
-        return None
-
-conn = get_connection()
-
-
-def get_db_connection():
-    server = 'OMNO'
-    database = 'NewHospital'
-
-    # SQLAlchemy connection string for Windows Authentication
-    connection_string = f"mssql+pyodbc://@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server&Trusted_Connection=yes"
-
-    # Create the SQLAlchemy engine
-    engine = create_engine(connection_string)
-    return engine
-
-if "db_connection" not in st.session_state:
-    st.session_state["db_connection"] = get_db_connection()
-
-# Retrieve the shared connection
-engine = st.session_state["db_connection"]
 
 
 import Home, Hospital_info, about, My_info , Tests, Doctor_info
-
-st.set_page_config(page_title = "Hospital App", page_icon= '🏥', layout="wide")
 
 with st.spinner("Calculating......."):
 
