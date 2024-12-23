@@ -1,6 +1,7 @@
 import streamlit as st
 
 def app():
+
     # Example Streamlit content
     col1, col2 = st.columns([2,6])
     with col2 :st.title("Hello to our App")

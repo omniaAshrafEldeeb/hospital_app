@@ -43,58 +43,61 @@ engine = st.session_state["db_connection"]
 import Home, Hospital_info, about, My_info , Tests, Doctor_info
 
 st.set_page_config(page_title = "Hospital App", page_icon= '🏥', layout="wide")
-st.snow()
+
+with st.spinner("Calculating......."):
+
+    st.snow()
 
 
 
-class MultiApp :
-    
-    def __init__ (self):
-        self.apps = []
-
-    def add_app(self, title, func):
-
-        self.apps.append (
-            {"title": title,
-            "function" : func,
-            })
+    class MultiApp :
         
-    def run():
-        with st.sidebar:
-            app = option_menu(
-                menu_title ='Hispotals app',
-                menu_icon = 'options',
-                options = ['Home', "Hospitals info","Doctors info","My info","Tests","About&contact"] ,
-                icons = [] ,
-                default_index = 0,
-        
-            )
+        def __init__ (self):
+            self.apps = []
 
-        if app == "Home":
-            Home.app()
+        def add_app(self, title, func):
 
-        if app == "Hospitals info":
-            Hospital_info.app()
-        if app == "Doctors info":
-            Doctor_info.app()
-        if app == "My info":
-            #
-            # st.balloons()
-            My_info.app()
-        if app == "Tests":
-            Tests.app()
-        if app == "About&contact":
-            about.app()
+            self.apps.append (
+                {"title": title,
+                "function" : func,
+                })
+            
+        def run():
+            with st.sidebar:
+                app = option_menu(
+                    menu_title ='Hispotals app',
+                    menu_icon = 'options',
+                    options = ['Home', "Hospitals info","Doctors info","My info","Tests","About&contact"] ,
+                    icons = [] ,
+                    default_index = 0,
+            
+                )
 
-    run()    
-    print("okay6")
+            if app == "Home":
+                Home.app()
+
+            if app == "Hospitals info":
+                Hospital_info.app()
+            if app == "Doctors info":
+                Doctor_info.app()
+            if app == "My info":
+                #
+                # st.balloons()
+                My_info.app()
+            if app == "Tests":
+                Tests.app()
+            if app == "About&contact":
+                about.app()
+
+        run()    
+        print("okay6")
 
 
 
 
 
 
-# Inject the CSS into the app using st.markdown
+    # Inject the CSS into the app using st.markdown
 
 
 
