@@ -9,7 +9,7 @@ def app():
     with v2 : st.header("")
     v1 ,v2, v3=st.columns([1,1,1])
     with v2 :st.markdown("***We wish you complete health.*** ")
-    with v3 : st.image(r"C:\Users\MF\Desktop\StreamlitProj2\—Pngtree—doctors and health workers 3d_13000206.png", width=200)
+    with v3 : st.image("doctors and health workers.png", width=200)
 
     #print('okay')
 
