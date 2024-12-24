@@ -11,7 +11,7 @@ def app():
 
             st.subheader ('Diabetes Prediction Test')
             c= st.container()
-            mymodel = pickle.load(open(r"C:\Users\MF\Downloads\SVM.pkl",'rb'))
+            mymodel = pickle.load(open('SVM.pkl','rb'))
 
 
             
@@ -108,7 +108,7 @@ def app():
                 if result ==0 :
                     v2.subheader("The patient is clear")
                     i,b =st.columns([2,20])
-                    b.image(r'C:\Users\MF\Downloads\360_F_111755682_lL0qdCITRiPtS7Ytmr8LGydLd28nk9xM.jpg')
+                    b.image("Good.jpg")
 
             # Print the result
                     
