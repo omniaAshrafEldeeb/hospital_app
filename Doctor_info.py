@@ -21,16 +21,16 @@ def app():
 
         sentiment_mapping = ["one", "two", "three", "four", "five"]
 
-
+        Frate = 0
         # Display the food details
         with col1:st.write(f" ***{D_name}***, Department: {De_name}, phone: {phone_number}, Hospital name: {H_name}")
                         # Use st.slider to get the rating
         with col2:selected = st.feedback("stars",key = f"feedback_{i}")
         if selected is not None:
             st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
-
+            Frate = selected+1
         #with col2: rating = st.slider(f"Rate {D_name}", 0, 5, 0, key=f"slider_{i}")
-        result4.at[i, 'rating'] = selected  # Update the rating in the DataFrame
+        result4.at[i, 'rating'] = Frate  # Update the rating in the DataFrame
         result4.to_csv('output_file_D.csv', index=False)  # Set index=False to not include the row index in the CSV
 
     # Show the DataFrame with the ratings

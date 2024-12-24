@@ -43,7 +43,7 @@ def app():
         H_manager = row['H_manager_name']
         H_address = row['H_address']
         H_email = row['H_email']
-
+        fRate = 0
         sentiment_mapping = ["one", "two", "three", "four", "five"]
 
         # Display the food details
@@ -54,7 +54,7 @@ def app():
             st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
 
         #with col2: rating = st.slider(f"Rate {D_name}", 0, 5, 0, key=f"slider_{i}")
-        df.at[i, 'rating'] = selected  # Update the rating in the DataFrame
+        df.at[i, 'rating'] = fRate +1  # Update the rating in the DataFrame
         df.to_csv('output_file_H.csv', index=False)  # Set index=False to not include the row index in the CSV
 
     # Show the DataFrame with the ratings
