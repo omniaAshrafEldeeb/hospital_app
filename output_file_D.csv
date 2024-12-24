@@ -1,7 +1,7 @@
 D_name,De_name,phone_number,H_name,rating
 Dr. Daniel King,Pediatrics,456-789-0123,City Medical Center,
 Dr. Daniel King,Pediatrics,456-789-0123,Green Valley Hospital,
-Dr. Ella Scott,Radiology,567-890-1234,Green Valley Hospital,3.0
+Dr. Ella Scott,Radiology,567-890-1234,Green Valley Hospital,
 Dr. Ella Scott,Radiology,567-890-1234,Sunshine Health Clinic,
 Dr. Frank Adams,Emergency,,City Medical Center,
 Dr. Frank Adams,Emergency,,Green Valley Hospital,
@@ -45,5 +45,5 @@ Dr. Ben Wood,Housekeeping - General,,Clearwater General Hospital,
 Dr. Ben Wood,Housekeeping - General,,Golden Care Hospital,
 Dr. Charlie Lee,Housekeeping - ICU,,City Medical Center,
 Dr. Charlie Lee,Housekeeping - ICU,,Green Valley Hospital,
-Dr. Diana White,Security - Day Shift,,Green Valley Hospital,1.0
+Dr. Diana White,Security - Day Shift,,Green Valley Hospital,
 Dr. Diana White,Security - Day Shift,,Golden Care Hospital,

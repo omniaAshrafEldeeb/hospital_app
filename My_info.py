@@ -10,9 +10,22 @@ def app():
         # Every form must have a submit button.
         submitted = st.form_submit_button("Submit")
         if submitted:
-            if user_id_n != "omnia" or password_n != 'o':
-                st.write("Please enter correct user id and password")
-            st.write(f"hello {user_id_n}")
+            i = 0
+            while ((user_id_n != "omnia" or password_n != 'o' )and i<5):
+                
+                if submitted and (user_id_n != "omnia" or password_n != 'o'):
+                    st.write("Please enter correct user id and password")
+                if i > 5 :
+                    st.warning("Try later")
+                    # Optionally, hide the "try later" message after a certain time
+                    #st.experimental_rerun()
+                    st.empty
+                    break
+                submitted = False
+                i+=1
+            if user_id_n == "omnia" or password_n == 'o':
+                u = None
+                st.write(f"hello {user_id_n}")
             #st.page_link(r"C:\Users\MF\Desktop\StreamlitProj2\Home.py", label="Page 1", icon="1️⃣")
 
             #st.switch_page("pages/Home.py")
