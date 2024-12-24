@@ -9,7 +9,7 @@ def app():
     with v2 : st.subheader("")
     v1 ,v2=st.columns([3,12])
     with v2: st.title("information about Doctors, 1433")
-    v1 ,v2=st.columns([3,10])
+    v1 ,v2=st.columns([4,10])
 
     result4 =pd.read_csv('output_file_D.csv')
     for i, row in result4.iterrows():
